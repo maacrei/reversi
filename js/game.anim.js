@@ -21,5 +21,13 @@ if (window.game.anim === undefined) {window.game.anim = {}}
     return id;
   };
 
-  
-})
+  _t.cnclAnmFrm = function(id) {
+    (window.cancelAnimationFrame ||
+     window.webkitCancelRequestAnimationFrame ||
+     window.mozCancelRequestAnimationFrame ||
+     window.oCancelRequestAnimationFrame ||
+     window.msCancelRequestAnimationFrame ||
+     window.clearTimeout)(id)
+  };
+
+})();
